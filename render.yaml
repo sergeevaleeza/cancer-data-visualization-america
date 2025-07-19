@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: cancer-viz
+    env: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    regions:
+      - oregon
